@@ -1,0 +1,140 @@
+:root {
+--soft-blue: hsl(215, 51%, 70%);
+--cyan: hsl(178, 100%, 50%);
+
+--very-dark-blue-main: hsl(217, 54%, 11%);
+--very-dark-blue-card: hsl(216, 50%, 16%);
+--very-dark-blue-line: hsl(215, 32%, 27%);
+--white: hsl(0, 0%, 100%);
+
+--font-family: 'Outfit', sans-serif;
+--margin: 1.5rem;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+ background: var(--very-dark-blue-main);
+ -webkit-font-smoothing: antialiased;
+}
+
+button {
+ cursor: pointer;
+}
+
+main {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    width: 350px;
+    height: 590px;
+    border-radius: 15px;
+    background-color: var(--very-dark-blue-card);
+    color: var(--soft-blue);
+    padding: 1.5rem;
+}
+
+.logo > img {
+    border-radius: 10px;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+.title {
+    font-size: 1.5rem;
+    margin: var(--margin) 0;
+    color: var(--white);
+    font-weight: 600;
+}
+
+.description {
+    margin: var(--margin) 0;
+    text-align: start;
+    word-spacing: 5px;
+    color: var(--soft-blue);
+}
+
+.price {
+    margin: var(--margin) 0;
+    font-weight: 600;
+    color: var(--cyan);
+    position: relative;
+    display: inline-block;
+    left: 1rem;
+}
+
+.days-left {
+    position: relative;
+    left: 0rem;
+    display: inline-block;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.price::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0;
+    left: -1rem;
+    background-repeat: no-repeat;
+    background-image: url("../images/icon-ethereum.svg");
+}
+
+.days-left::before {
+    content: "";
+    position: absolute;
+    width: 1rem;
+    height: 1rem;
+    top: 0;
+    left: -1.2rem;
+    background-repeat: no-repeat;
+    background-image: url("../images/icon-clock.svg");
+}
+
+.divider {
+    border-top: 1px solid var(--very-dark-blue-line);
+}
+
+.creator {
+    margin: var(--margin) 0;
+    display: flex;
+}
+.creator > span {
+    margin-left: 1rem;
+    color: var(--white);
+}
+.creator > img {
+    display: inline-block;
+    margin-bottom: 1px;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    border: 1px solid var(--white);
+    position: relative;
+    bottom: 5px;
+}
+.creator > span::before {
+    content: "Creation of ";
+    color: var(--soft-blue);
+}
